@@ -40,7 +40,7 @@ const SearchBox = () => {
   };
   useEffect(() => {
     setGuest(adults + childs);
-  }, [adults, childs]);
+  }, [adults, childs, setGuest]);
   return (
     <>
       <section className="searchBox">
