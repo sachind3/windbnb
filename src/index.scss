@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap");
+$pink: #eb5757;
+$default: #333333;
+$gray: #828282;
+$dark-gray: #4f4f4f;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: $default;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.wrapper {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 5.625rem;
+  @media only screen and (max-width: 80rem) {
+    padding: 0 2rem;
+  }
+  @media only screen and (max-width: 55rem) {
+    padding: 0 1rem;
+  }
+}
+.rommsgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  @media only screen and (max-width: 80rem) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  @media only screen and (max-width: 55rem) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  @media only screen and (max-width: 40rem) {
+    grid-template-columns: 1fr;
+  }
+}
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  h2 {
+    font-size: 1.5rem;
+  }
+  .sub-text {
+    color: $dark-gray;
+  }
+}
+nav {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  .logo {
+    color: $pink;
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    @media only screen and (max-width: 35rem) {
+      align-self: flex-start;
+      margin-bottom: 1rem;
+    }
+    .mascot {
+      position: relative;
+      background-color: $pink;
+      margin-left: 0.2rem;
+      margin-right: 0.8rem;
+    }
+    .mascot:before,
+    .mascot:after {
+      content: "";
+      position: absolute;
+      background-color: inherit;
+    }
+    .mascot,
+    .mascot:before,
+    .mascot:after {
+      width: 0.8rem;
+      height: 0.8rem;
+      border-top-right-radius: 50%;
+    }
+
+    .mascot {
+      transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+    }
+    .mascot:before {
+      transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
+        translate(0, -50%);
+    }
+    .mascot:after {
+      transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+    }
+  }
+}
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media only screen and (max-width: 35rem) {
+    flex-direction: column;
+  }
+}
+.navSearch {
+  min-height: 3.438rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  @media only screen and (max-width: 35rem) {
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.8fr;
+    width: 100%;
+  }
+  .inputDiv {
+    min-height: 3.438rem;
+    padding: 0 1rem;
+    background: #fff;
+    border: 0;
+    border-right: 1px solid #f2f2f2;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #828282;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .inputBtn {
+    min-height: 3.438rem;
+    width: 3.125rem;
+    border: 0;
+    background: #fff;
+    color: #eb5757;
+    font-size: 1.5rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+.searchBar {
+  display: grid;
+  grid-template-columns: calc(100% - 8rem) 8rem;
+  min-height: 3.438rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  position: relative;
+  @media only screen and (max-width: 35rem) {
+    grid-template-columns: 1fr;
+    box-shadow: none;
+  }
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    @media only screen and (max-width: 35rem) {
+      box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+  }
+  .inputDiv {
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid #f2f2f2;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    @media only screen and (max-width: 35rem) {
+      width: 100%;
+      padding: 1rem;
+      border-right: 0;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    span {
+      font-size: 0.7rem;
+      color: $default;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  button.searchBtn {
+    min-height: 3.438rem;
+    border: 0;
+    background: $pink;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    @media only screen and (max-width: 35rem) {
+      padding: 0.5rem 1.2rem;
+      min-height: auto;
+      border-radius: 1rem;
+      justify-self: center;
+    }
+    svg {
+      font-size: 2rem;
+      margin-right: 0.8rem;
+      @media only screen and (max-width: 35rem) {
+        font-size: 1.5rem;
+        margin-right: 0.2rem;
+      }
+    }
+  }
+}
+.searchModal {
+  position: absolute;
+  width: calc(calc(100% - 8rem) / 2);
+  left: 0;
+  top: 4rem;
+  background: #fff;
+  left: 0;
+  border-radius: 1rem;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  &.peopleModal {
+    left: calc(calc(100% - 8rem) / 2);
+  }
+  @media only screen and (max-width: 35rem) {
+    box-shadow: none;
+    position: relative;
+    top: 0;
+    grid-template-columns: 1fr;
+  }
+}
+.locationModal {
+  ul {
+    list-style: none;
+    li {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      &:hover {
+        background: #f2f2f2;
+      }
+      svg {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+.peopleCouter {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  p {
+    font-weight: 300;
+    color: $gray;
+  }
+  .counter {
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+    button {
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 1px solid $gray;
+      background: #fff;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .peopleCount {
+      min-width: 2.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+  }
+}
+.searchBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 2rem 0;
+  z-index: 2;
+}
+.backdrop {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.romm-image {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 0.938rem;
+}
+.romm-image img {
+  display: block;
+  width: 100%;
+}
+.room-body {
+  .roomInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    min-height: 1.813rem;
+  }
+  .superHost {
+    text-transform: uppercase;
+    color: $dark-gray;
+    border: 1px solid $dark-gray;
+    border-radius: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 10px;
+    margin-right: 0.75rem;
+  }
+  .hotelTypeBed {
+    color: $gray;
+    font-size: 0.875rem;
+  }
+  .rating {
+    margin-left: auto;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: 1rem;
+      color: $pink;
+    }
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+}
+.singleRoom {
+  @media only screen and (max-width: 35rem) {
+    margin-bottom: 1rem;
+  }
+}
+
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: $pink;
+    font-weight: 600;
+  }
+}

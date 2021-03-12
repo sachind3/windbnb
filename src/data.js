@@ -1,0 +1,170 @@
+import room1 from "./images/room-1.png";
+import room2 from "./images/room-2.png";
+import room3 from "./images/room-3.png";
+import room4 from "./images/room-4.png";
+import room5 from "./images/room-5.png";
+import room6 from "./images/room-6.png";
+import room7 from "./images/room-7.png";
+import room8 from "./images/room-8.png";
+import room9 from "./images/room-9.png";
+import room10 from "./images/room-10.png";
+import room11 from "./images/room-11.png";
+import room12 from "./images/room-12.png";
+import room13 from "./images/room-13.png";
+import room14 from "./images/room-14.png";
+
+const items = [
+  {
+    id: 1,
+    location: "Helsinki, Finland",
+    superHost: false,
+    title: "Stylist apartment in center of the location, Finland",
+    maxGuests: 3,
+    type: "Entire apartment",
+    beds: 2,
+    url: room1,
+  },
+  {
+    id: 2,
+    location: "Turku, Finland",
+    superHost: false,
+    title: "Nice apartment in center of Helsinki",
+    rating: 4.2,
+    maxGuests: 5,
+    type: "Entire apartment",
+    beds: 3,
+    url: room2,
+  },
+  {
+    id: 3,
+    location: "Helsinki, Finland",
+    superHost: true,
+    title: "Arty interior in 1900 wooden house",
+    rating: 4.5,
+    maxGuests: 10,
+    type: "Entire house",
+    beds: 6,
+    url: room3,
+  },
+  {
+    id: 4,
+    location: "Helsinki, Finland",
+    superHost: false,
+    title: "Apartment next to market spuare",
+    rating: 4.48,
+    maxGuests: 3,
+    type: "Entire apartment",
+    beds: null,
+    url: room4,
+  },
+  {
+    id: 5,
+    location: "Turku, Finland",
+    superHost: true,
+    title: "Villa Aurora guest-house",
+    rating: 4.75,
+    maxGuests: 9,
+    type: "Entire house",
+    beds: null,
+    url: room5,
+  },
+  {
+    id: 6,
+    location: "Vaasa, Finland",
+    superHost: true,
+    title: "A cosy family house",
+    rating: 4.95,
+    maxGuests: 6,
+    type: "Entire house",
+    beds: null,
+    url: room6,
+  },
+  {
+    id: 7,
+    location: "Vaasa, Finland",
+    superHost: false,
+    title: "Lovely Studio near Railway Station",
+    rating: 4.68,
+    maxGuests: 2,
+    type: "Private room",
+    beds: null,
+    url: room7,
+  },
+  {
+    id: 8,
+    location: "Oulu, Finland",
+    superHost: false,
+    title: "Peaceful little home in location center, Finland",
+    maxGuests: 6,
+    type: "Entire house",
+    beds: 3,
+    url: room8,
+  },
+  {
+    id: 9,
+    location: "Oulu, Finland",
+    superHost: false,
+    title: "Beautiful new studio apartment nearby the center",
+    rating: 4.49,
+    maxGuests: 2,
+    type: "Entire apartment",
+    beds: 1,
+    url: room9,
+  },
+  {
+    id: 10,
+    location: "Oulu, Finland",
+    superHost: true,
+    title: "Cozy woodhouse flat with wooden sauna",
+    rating: 4.38,
+    maxGuests: 4,
+    type: "Entire house",
+    beds: null,
+    url: room10,
+  },
+  {
+    id: 11,
+    location: "Vaasa, Finland",
+    superHost: false,
+    title: "Brand new studio apartment near the harbour",
+    rating: 4.89,
+    maxGuests: 6,
+    type: "Entire apartment",
+    beds: 3,
+    url: room11,
+  },
+  {
+    id: 12,
+    location: "Helsinki, Finland",
+    superHost: false,
+    title: "Beautiful and comfortable old wooden house",
+    rating: 4.63,
+    maxGuests: 10,
+    type: "Entire house",
+    beds: null,
+    url: room12,
+  },
+  {
+    id: 13,
+    location: "Turku, Finland",
+    superHost: false,
+    title: "Turku Nordic Home near location center, Finland",
+    maxGuests: 5,
+    type: "Entire apartment",
+    beds: 3,
+    url: room13,
+  },
+  {
+    id: 14,
+    location: "Turku, Finland",
+    superHost: true,
+    title: "Nice 2 room apartment close to everything",
+    rating: 4.34,
+    maxGuests: 6,
+    type: "Entire apartment",
+    beds: 3,
+    url: room14,
+  },
+];
+
+export default items;
